@@ -1,0 +1,48 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "jhjjh",
+        "description": "hshshshshs"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.49713778489242,
+          19.29207523426385
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "hola",
+        "description": "si"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.50515651689784,
+          19.29188156720734
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "UAM",
+        "description": "La ubicación de la universidad y referencia para guiarse"
+      },
+      "geometry": {
+        "coordinates": [
+          -99.50185420532532,
+          19.29215544024531
+        ],
+        "type": "Point"
+      },
+      "id": 0
+    }
+  ]
+}

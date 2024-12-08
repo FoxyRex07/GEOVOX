@@ -1,0 +1,223 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #f1f1f1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#info img{
+    width:20px;
+    height:auto;
+}
+
+.sidebar h2 {
+    text-align: center;
+    font-size: 50px;
+}
+
+.sidebar button {
+    padding: 10px;
+    border: none;
+    background-color: #ddd;
+    cursor: pointer;
+    text-align: left;
+}
+
+.sidebar button:hover {
+    background-color: #ccc;
+}
+
+.search {
+    display: flex;
+    gap: 10px;
+}
+
+.search input {
+    flex: 1;
+    padding: 5px;
+}
+
+#buscar img{
+    width:20px;
+    height:auto;
+}
+
+#etiqueta img{
+    width:20px;
+    height:auto;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.top-buttons {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.top-buttons button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+.top-buttons button:hover {
+    background-color: #ccc;
+}
+
+.content-area {
+    flex: 1;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin: 10px;
+}
+
+.bottom-icons {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background: none;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#texto img{
+    width:20px;
+    height:auto;
+}
+
+#audios img{
+    width:20px;
+    height:auto;
+}
+
+#fotos img{
+    width:20px;
+    height:auto;
+}
+
+#ubicacion img{
+    width:20px;
+    height:auto;
+}
+
+#mano img{
+    width:20px;
+    height:auto;
+}
+
+.bottom-icons button {
+    font-size: 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+
+
+
+/* MAPA */
+/* Estilo para el mapa */
+#mapa {
+    height: 80vh;
+    width: 70vw; /* Aumentado el ancho para un mapa más grande */
+    margin-bottom: 0%; /* Menor espacio debajo */
+    border-radius: 10px; /* Bordes redondeados para el mapa */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+}
+
+/* Estilo para el contenido de los popups */
+.leaflet-popup-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px;
+    background-color: #fff; /* Fondo blanco para los popups */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    max-width: 250px; /* Limitar el ancho del popup */
+}
+
+/* Títulos dentro del popup */
+.leaflet-popup-content > h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #444; /* Color gris oscuro para el título */
+    text-align: center;
+}
+
+/* Ocultar la atribución de Leaflet */
+.leaflet-control-attribution {
+    display: none;
+}
+
+/* Mejora del estilo de los marcadores al interactuar con ellos */
+.leaflet-interactive {
+    transition: 0.5s ease; /* Transición suave en la interacción */
+    fill-opacity: 0.3;
+}
+
+/* Cambio de opacidad al pasar el ratón sobre los elementos interactivos */
+.leaflet-interactive:hover {
+    fill-opacity: 0.7; /* Aumento de la opacidad al pasar el ratón */
+    transition: 0.5s ease; /* Transición suave */
+}
+
+/* Estilo para el marcador cuando el ratón pasa sobre él */
+.leaflet-marker-pane {
+    transition: transform 0.3s ease, width 0.3s ease; /* Transición suave */
+}
+
+/* Agrandar el marcador al pasar el ratón por encima */
+.leaflet-marker-pane:hover {
+    filter: hue-rotate(9deg); /* Añadir un filtro de cambio de color */
+}
+
+/* Estilo de los controles de mapa (botones y controles) */
+.leaflet-control-zoom {
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro y semi-transparente */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 5px;
+}
+
+.leaflet-control-zoom-in, .leaflet-control-zoom-out {
+    font-size: 18px; /* Aumentar el tamaño de los botones */
+    color: white; /* Color blanco para los botones */
+}
+
+.leaflet-control-zoom-in:hover, .leaflet-control-zoom-out:hover {
+    background-color: #333; /* Color más oscuro al hacer hover */
+}
+
+/* Estilo para el control de atribución si lo necesitas */
+.leaflet-control-attribution {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro para la atribución */
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 12px;
+    color: white;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GE[VO]X</title>
+    <!-- Linkeamos leaflet para abrir el mapa -->
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="anonymous">
+    <!-- CSS linkeado -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Icono de la pagina -->
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1397/1397898.png" type="image/png">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <button id="info">
+                <img src="imagenes/boton-de-informacion.png" alt="Informacion">
+            </button>
+            <h2>GE[VO]X</h2>
+            <button>Testimonios</button>
+            <button>Fotografías</button>
+            <button>Audios</button>
+            <div class="search">
+                <input type="text" placeholder="Buscar...">
+                <button id="buscar">
+                    <img src="imagenes/buscar.png" alt="Buscar">
+                </button>
+                <button id="etiqueta">
+                    <img src="imagenes/etiqueta.png" alt="Etiquetas">
+                </button>
+            </div>
+            <button>Amistad</button>
+            <button>Familia</button>
+            <button>Amor</button>
+            <button>Random</button>
+            <button>Mis historias</button>
+        </div>
+        <div class="main-content">
+            <div class="top-buttons">
+                <button>Lerma Villada Edo.Mex</button>
+                <button>Centro</button>
+                <button id="subir">Subir</button>
+            </div>
+            <div id="mapa"></div>
+            <div class="bottom-icons">
+                <button id="texto">
+                    <img src="imagenes/mensajero.png" alt="Textos">
+                </button>
+                <button id="audios">
+                    <img src="imagenes/volumen.png" alt="Audios">
+                </button>
+                <button id="fotos">
+                    <img src="imagenes/camara-fotografica.png" alt="Fotos">
+                </button>
+                <button id="ubicacion">
+                    <img src="imagenes/ubicacion.png" alt="Ubicacion">
+                </button>
+                <button id="mano">
+                    <img src="imagenes/palma-de-la-mano.png" alt="Mano">
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="anonymous" defer></script>
+    <script type="module" src="js/scrypt.js" defer></script>
+</body>
+</html>
