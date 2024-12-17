@@ -1,0 +1,51 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "123",
+        "description": "12"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.50795245164046,
+          19.289703619843703
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "hola",
+        "description": "1223"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.51129341112394,
+          19.28601625837304
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "UAM",
+        "description": "Esta es la UAM y tu punto de referencia",
+        "marker-color": "#a800e6",
+        "marker-size": "medium",
+        "marker-symbol": "circle"
+      },
+      "geometry": {
+        "coordinates": [
+          -99.50209647918172,
+          19.29177472204185
+        ],
+        "type": "Point"
+      },
+      "id": 0
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GEOVOX Formulario</title>
+  <!-- Estilo para el mapa -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="/css/form.css">
+</head>
+
+<body>
+  <header>
+      <!-- Título de la página -->
+    <h1 style="text-align: center;">Sube tu anecdota</h1>
+  </header>
+
+  <!-- Formulario para ingresar datos -->
+  <form id="data-form">
+    <label for="title">Título:</label>
+    <input type="text" id="title" name="title" required /> <!-- Campo de texto para el título -->
+
+    <label for="description">Descripción:</label>
+    <textarea id="description" name="description" rows="4" required></textarea> <!-- Campo de texto para la descripción -->
+
+    <label for="image">Subir imagen:</label>
+    <input type="file" id="image" name="image" accept="image/*"/>
+
+    <label for="audio">Subir audio:</label>
+    <input type="file" id="audio" name="audio" accept="audio/*"/>
+
+    <label for="color">Selecciona el color del marcador:</label>
+    <input type="color" id="color" value="#ff0000">
+
+    <!-- Div para mostrar el mapa -->
+    <div id="map"></div>
+
+    <!-- Botón para guardar los datos -->
+    <button type="button" id="save-button">Guardar Datos</button>
+  </form>
+
+  <!-- Scripts necesarios para Leaflet y funcionalidad del mapa -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="/js/form.js"></script>
+</body>
+
+</html>

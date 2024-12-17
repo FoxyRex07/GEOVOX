@@ -1,0 +1,51 @@
+body{
+    font-family: Arial, sans-serif;
+  }
+  header {
+    text-align: center;
+    padding: 20px;
+    background-color: #ff4949;
+    color: #fff;
+}
+  /* Estilo para el mapa */
+  #map {
+    height: 400px; /* Altura del mapa */
+    margin-top: 20px; /* Espaciado superior */
+  }
+
+  /* Estilo para el formulario */
+  form {
+    max-width: 600px; /* Máximo ancho del formulario */
+    margin: 0 auto; /* Centrado del formulario */
+  }
+
+  label {
+    display: block; /* Hacer que la etiqueta ocupe una línea completa */
+    margin-top: 25px; /* Espaciado superior */
+  }
+
+  input,
+  textarea {
+    width: 100%; /* Ancho completo para los campos de entrada */
+    padding: 8px; /* Relleno dentro de los campos */
+    margin-top: 5px; /* Espaciado superior */
+  }
+
+  input[type="color"] {
+  width: 40px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+}
+  button {
+    margin-top: 20px; /* Espaciado superior */
+    padding: 10px 20px; /* Relleno del botón */
+    background-color: #007BFF; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cursor de mano al pasar por encima */
+  }
+
+  button:hover {
+    background-color: #0056b3; /* Color de fondo del botón cuando se pasa el mouse */
+  }
