@@ -109,6 +109,9 @@ fetch('/geojson')
   // Evento para cerrar la ventana al hacer clic en el botón de cerrar
   closePopupButton.addEventListener('click', closePopup);
 
+  // Evento para cerrar la ventana al hacer clic en el overlay
+  overlay.addEventListener('click', closePopup);
+
   // Mostrar automáticamente la ventana al cargar el documento
   window.addEventListener('load', showPopup);
 
@@ -135,3 +138,6 @@ geovoxText.addEventListener('click', showGeovoxPopup);
 
 // Evento para cerrar el popup al hacer clic en el botón de cerrar
 closeGeovoxButton.addEventListener('click', closeGeovoxPopup);
+
+// Evento para cerrar la ventana al hacer clic en el overlay
+overlayGeovox.addEventListener('click', closeGeovoxPopup);
