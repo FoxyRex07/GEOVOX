@@ -204,7 +204,7 @@ body {
 /* Estilo para el mapa */
 #mapa {
     height: 80vh;
-    width: 70vw; /* Aumentado el ancho para un mapa más grande */
+    width: 100%; /* Aumentado el ancho para un mapa más grande */
     margin-bottom: 0%; /* Menor espacio debajo */
     border-radius: 10px; /* Bordes redondeados para el mapa */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
@@ -358,39 +358,52 @@ body {
     border-radius: 5px;
 }
 
-/*                Responsiva                     */
-/* For mobile phones: */
-[class*="col-"] {
-    width: 100%;
+
+
+/*             Esto la hace Responsiva                     */
+/* Diseño general para pantallas grandes */
+.container {
+    display: flex;
+    flex-direction: row;
   }
   
-  @media only screen and (min-width: 600px) {
-    /* For tablets: */
-    .col-s-1 {width: 8.33%;}
-    .col-s-2 {width: 16.66%;}
-    .col-s-3 {width: 25%;}
-    .col-s-4 {width: 33.33%;}
-    .col-s-5 {width: 41.66%;}
-    .col-s-6 {width: 50%;}
-    .col-s-7 {width: 58.33%;}
-    .col-s-8 {width: 66.66%;}
-    .col-s-9 {width: 75%;}
-    .col-s-10 {width: 83.33%;}
-    .col-s-11 {width: 91.66%;}
-    .col-s-12 {width: 100%;}
+  /* Ajustes para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column; /* Cambia de disposición horizontal a vertical */
+    }
+  
+    .sidebar {
+      width: 95%; /* La barra lateral ocupa todo el ancho */
+      order: 2; /* Mueve la barra lateral al final */
+    }
+  
+    .main-content {
+      order: 1; /* Mueve el contenido principal al inicio */
+    }
+  
+    .search input {
+      width: 100%; /* Los campos de búsqueda ocupan todo el ancho */
+    }
+  
+    .button-list {
+      max-height: 150px; /* Ajusta la altura de la lista */
+    }
   }
-  @media only screen and (min-width: 768px) {
-    /* For desktop: */
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
+  
+  /* Diseño para pantallas muy pequeñas (teléfonos) */
+  @media (max-width: 480px) {
+    .button-list button {
+      font-size: 14px; /* Reduce el tamaño de los botones */
+      padding: 5px; /* Espaciado más pequeño */
+    }
+  
+    .top-buttons button {
+      padding: 10px; /* Botones superiores más pequeños */
+    }
+  
+    #mapa {
+      width: 100%; /* El mapa ocupa todo el ancho */
+      height: 50vh; /* Ajusta la altura del mapa */
+    }
   }
