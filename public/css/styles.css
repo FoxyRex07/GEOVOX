@@ -298,6 +298,7 @@ body {
     display: none; /* Oculta por defecto */
     text-align: justify;
     line-height: 1cm;
+    font-size: 100%;
 }
 
 /* Fondo oscuro para el overlay */
@@ -336,6 +337,8 @@ body {
     z-index: 1000;
     display: none; /* Oculto por defecto */
     text-align: justify;
+    line-height: 1cm;
+    font-size: 100%;
 }
 
 #overlay-geovox {
