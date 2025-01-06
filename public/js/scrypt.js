@@ -66,17 +66,57 @@ fetch('/geojson')
     geojsonFeature = data;
 
     // Añade los datos GeoJSON al mapa
+
     L.geoJSON(geojsonFeature, {
       pointToLayer: function (feature, latlng) {
+        // Seleccionar el ícono según el tipo de marcador
+        const markerIcons = {
+          red: 'imagenes/red.png',
+          blue: 'imagenes/blue.png',
+          green: 'imagenes/blue.png',
+          purple:"imagenes/purple.png",
+          gray:"imagenes/gray.png",
+          orange:"imagenes/orange.png",
+          pink:"imagenes/pink.png",
+          yellow:"imagenes/yellow.png"
+        };
+    
+        const iconUrl = markerIcons[feature.properties.markerType] || '/images/default-marker.png';
+    
         const normalIcon = L.icon({
-          iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png', // Ícono estándar de Leaflet
-          iconSize: [25, 41], // Tamaño inicial
-          iconAnchor: [12.5, 41] // Ajuste del anclaje
+          iconUrl: iconUrl,
+          iconSize: [30, 41], // Tamaño normal del ícono
+          iconAnchor: [12.5, 41],
+          popupAnchor: [0, -41]
         });
-        return L.marker(latlng, { icon: normalIcon }); // Crea un marcador estándar
+    
+        const largeIcon = L.icon({
+          iconUrl: iconUrl,
+          iconSize: [40, 57], // Tamaño grande del ícono al pasar el cursor
+          iconAnchor: [17.5, 57],
+          popupAnchor: [0, -57]
+        });
+    
+        const marker = L.marker(latlng, { icon: normalIcon });
+    
+        // Eventos para cambiar el tamaño del ícono
+        marker.on('mouseover', () => {
+          marker.setIcon(largeIcon); // Cambia al ícono grande
+        });
+    
+        marker.on('mouseout', () => {
+          marker.setIcon(normalIcon); // Regresa al tamaño normal
+        });
+    
+        return marker;
       },
-      onEachFeature: onEachFeature
+      onEachFeature: function (feature, layer) {
+        if (feature.properties && feature.properties.title) {
+          layer.bindPopup(`<h2>${feature.properties.title}</h2><p>${feature.properties.description}</p>`);
+        }
+      }
     }).addTo(map);
+
   })
   .catch(error => {
     console.error('There was a problem with the fetch operation:', error);

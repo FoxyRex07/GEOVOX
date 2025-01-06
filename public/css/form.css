@@ -49,3 +49,31 @@ body{
   button:hover {
     background-color: #0056b3; /* Color de fondo del botón cuando se pasa el mouse */
   }
+
+  .marker-options {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .marker-options input[type="radio"] {
+    display: none; /* Ocultar los botones de radio */
+  }
+  
+  .marker-options label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+  
+  .marker-options label img {
+    width: 50px; /* Ajusta el tamaño de las imágenes */
+    height: auto;
+  }
+  
+  .marker-options input[type="radio"]:checked + label {
+    border-color: #48adff; /* Cambia el color del borde al estar seleccionado */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+  }

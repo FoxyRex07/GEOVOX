@@ -11,6 +11,14 @@ body {
     width: 100%;
 }
 
+/* Imagen de Titulo */
+#geovox {
+    display: block;
+    margin: 0 auto; /* Centra la imagen */
+    max-width: 250px; /* Tamaño máximo */
+    width: 100%; /* Escala con el contenedor */
+  }
+
 /* barra de la izquierda */
 
 .sidebar {
@@ -39,7 +47,7 @@ body {
 }
 
 #show-popup img{
-    width:20px;
+    width:40px;
     height:auto;
     border-radius: 100%;
 }
@@ -176,17 +184,17 @@ body {
 }
 
 #texto img{
-    width:20px;
+    width:30px;
     height:auto;
 }
 
 #audios img{
-    width:20px;
+    width:30px;
     height:auto;
 }
 
 #fotos img{
-    width:20px;
+    width:30px;
     height:auto;
 }
 

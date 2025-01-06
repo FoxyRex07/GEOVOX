@@ -4,28 +4,15 @@
     {
       "type": "Feature",
       "properties": {
-        "title": "123",
-        "description": "12"
+        "title": "prueba",
+        "description": "esto es una prueba",
+        "markerType": "purple"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -99.50795245164046,
-          19.289703619843703
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "title": "hola",
-        "description": "1223"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -99.51129341112394,
-          19.28601625837304
+          -99.50778722763063,
+          19.29171954491867
         ]
       }
     },
@@ -34,9 +21,7 @@
       "properties": {
         "title": "UAM",
         "description": "Esta es la UAM y tu punto de referencia",
-        "marker-color": "#a800e6",
-        "marker-size": "medium",
-        "marker-symbol": "circle"
+        "markerType": "purple"
       },
       "geometry": {
         "coordinates": [

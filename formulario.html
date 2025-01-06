@@ -29,9 +29,51 @@
 
     <label for="audio">Subir audio:</label>
     <input type="file" id="audio" name="audio" accept="audio/*"/>
+    
+    
+    <!-- Seleccionar el tipo de marcador -->
 
-    <label for="color">Selecciona el color del marcador:</label>
-    <input type="color" id="color" value="#ff0000">
+    <label for="marker-type">Selecciona el tipo de marcador:</label>
+      <div id="marker-options" class="marker-options">
+        <input type="radio" id="red-marker" name="marker-type" value="red" required>
+          <label for="red-marker">
+            <img src="imagenes/red.png" alt="Marcador rojo" title="Marcador rojo">
+          </label>
+        <input type="radio" id="blue-marker" name="marker-type" value="blue" required>
+          <label for="blue-marker">
+            <img src="imagenes/blue.png" alt="Marcador azul" title="Marcador azul">
+          </label>
+
+        <input type="radio" id="green-marker" name="marker-type" value="green" required>
+          <label for="green-marker">
+            <img src="imagenes/green.png" alt="Marcador verde" title="Marcador verde">
+          </label>
+
+        <input type="radio" id="purple-marker" name="marker-type" value="purple" required>
+          <label for="purple-marker">
+            <img src="imagenes/purple.png" alt="Marcador morado" title="Marcador morado">
+          </label>
+
+        <input type="radio" id="gray-marker" name="marker-type" value="gray" required>
+          <label for="gray-marker">
+            <img src="imagenes/gray.png" alt="Marcador gris" title="Marcador gris">
+          </label>
+        
+        <input type="radio" id="orange-marker" name="marker-type" value="orange" required>
+          <label for="orange-marker">
+            <img src="imagenes/orange.png" alt="Marcador naranja" title="Marcador naranja">
+          </label>
+
+        <input type="radio" id="pink-marker" name="marker-type" value="pink" required>
+          <label for="pink">
+            <img src="imagenes/pink.png" alt="Marcador rosa" title="Marcador rosa">
+          </label>
+
+        <input type="radio" id="yellow-marker" name="marker-type" value="yellow" required>
+          <label for="yellow-marker">
+            <img src="imagenes/yellow.png" alt="Marcador amarillo" title="Marcador amarillo">
+          </label>
+      </div>
 
     <!-- Div para mostrar el mapa -->
     <div id="map"></div>

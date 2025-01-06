@@ -8,8 +8,8 @@ let longitude = null;
 const map = L.map('map').setView([19.291261, -99.505652], 16); // El mapa empieza con un zoom de nivel 2
 
 // Añadir la capa de mapa base (OpenStreetMap) al mapa
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; OpenStreetMap contributors' // Atribución de la capa de mapa
+L.tileLayer('https://tile.openstreetmap.de/{z}/{x}/{y}.png', {
+  attribution: false // Atribución de la capa de mapa
 }).addTo(map);
 
 // Crear un marcador para el mapa
@@ -36,6 +36,8 @@ document.getElementById('save-button').addEventListener('click', () => {
   // Obtener los valores del formulario
   title = document.getElementById('title').value;
   description = document.getElementById('description').value;
+  //COLOR DEL MARCADOR
+  markerType = document.getElementById("marker-type").value;
 
   // Verificar si se ha seleccionado una ubicación en el mapa
   if (!latitude || !longitude) {
@@ -43,12 +45,25 @@ document.getElementById('save-button').addEventListener('click', () => {
     return;
   }
 
+
+
+    // Obtener la opción seleccionada
+  const markerType = document.querySelector('input[name="marker-type"]:checked').value;
+
+  if (!markerType) {
+    alert("Por favor, selecciona un tipo de marcador.");
+    return;
+  }
+
+
+  
   // Crear un objeto GeoJSON con los nuevos datos
   const newEntry = {
     type: "Feature", // Tipo de objeto GeoJSON (Feature)
     properties: {
       title: title, // Título del lugar
-      description: description // Descripción del lugar
+      description: description, // Descripción del lugar
+      markerType: markerType// Color del Marcador
     },
     geometry: {
       type: "Point", // Tipo de geometría (Punto)
@@ -74,3 +89,4 @@ document.getElementById('save-button').addEventListener('click', () => {
       alert("Hubo un error al guardar los datos."); // Avisar al usuario si hay un error
     });
 });
+
