@@ -53,31 +53,31 @@ body {
 }
 
 .sidebar button.btnbus{
-    background-color: #ff4949;
+    background-color: #be72ed;
 }
 
 .sidebar button.btnbus:hover{
-    background-color: #ff0000;
+    background-color: #9552be;
 }
 
 .sidebar button.btneti{
-    background-color: #ffe365;
+    background-color: #be72ed;
 }
 
 .sidebar button.btneti:hover{
-    background-color: #ffc800;
+    background-color: #9552be;
 }
 
 .sidebar button {
     padding: 10px;
     border: none;
-    background-color: #48adff;
+    background-color: #d1c1ae;
     cursor: pointer;
     text-align: left;
 }
 
 .sidebar button:hover {
-    background-color: #0088ff;
+    background-color: #8f765c;
 }
 
 .search {
@@ -113,14 +113,14 @@ body {
 .button-list button {
     padding: 10px;
     border: none;
-    background-color: #48adff;
+    background-color: #d9c3b1;
     color: white;
     cursor: pointer;
     text-align: center;
 }
 
 .button-list button:hover {
-    background-color: #0088ff;
+    background-color: #ac9275;
 }
 
 /* Ahora si cambia atras del mapa :) */
@@ -148,17 +148,17 @@ body {
 
     padding: 15px;
     border: none;
-    background-color: #ff8673;
+    background-color: #be72ed;
     cursor: pointer;
     border-radius: 100%;
 }
 
 .top-buttons button:hover {
-    background-color: #ff644d;
+    background-color: #9552be;
 }
 
 #subir img{
-    width:20px;
+    width:30px;
     height:auto;
 }
 
