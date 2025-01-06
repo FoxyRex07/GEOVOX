@@ -73,7 +73,7 @@ fetch('/geojson')
         const markerIcons = {
           red: 'imagenes/red.png',
           blue: 'imagenes/blue.png',
-          green: 'imagenes/blue.png',
+          green: 'imagenes/green.png',
           purple:"imagenes/purple.png",
           gray:"imagenes/gray.png",
           orange:"imagenes/orange.png",

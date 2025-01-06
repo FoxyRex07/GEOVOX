@@ -1,21 +1,7 @@
 {
   "type": "FeatureCollection",
   "features": [
-    {
-      "type": "Feature",
-      "properties": {
-        "title": "prueba",
-        "description": "esto es una prueba",
-        "markerType": "purple"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -99.50778722763063,
-          19.29171954491867
-        ]
-      }
-    },
+    
     {
       "type": "Feature",
       "properties": {

@@ -31,30 +31,29 @@ map.on('click', function (e) {
     .openPopup(); // Abrir el popup con las coordenadas
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+
 // Evento para guardar los datos del formulario cuando se hace clic en el botón "Guardar Datos"
 document.getElementById('save-button').addEventListener('click', () => {
   // Obtener los valores del formulario
   title = document.getElementById('title').value;
   description = document.getElementById('description').value;
-  //COLOR DEL MARCADOR
-  markerType = document.getElementById("marker-type").value;
+    // Obtener la opción seleccionada
+    const markerType = document.querySelector('input[name="marker-type"]:checked').value;
+
+    if (!markerType) {
+      alert("Por favor, selecciona un tipo de marcador.");
+      return;
+    }
+  
+    const markerValue = markerType.value;
+
 
   // Verificar si se ha seleccionado una ubicación en el mapa
   if (!latitude || !longitude) {
     alert("Por favor, selecciona un punto en el mapa."); // Avisar al usuario si no ha elegido una ubicación
     return;
   }
-
-
-
-    // Obtener la opción seleccionada
-  const markerType = document.querySelector('input[name="marker-type"]:checked').value;
-
-  if (!markerType) {
-    alert("Por favor, selecciona un tipo de marcador.");
-    return;
-  }
-
 
   
   // Crear un objeto GeoJSON con los nuevos datos
@@ -90,3 +89,4 @@ document.getElementById('save-button').addEventListener('click', () => {
     });
 });
 
+});

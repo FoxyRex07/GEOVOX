@@ -90,6 +90,29 @@ app.post('/update-geojson', (req, res) => {
     });
 });
 
+app.post('/update-geojson', (req, res) => {
+    const newData = req.body;
+    const geojsonPath = path.join(__dirname, 'data', 'map.geojson');
+  
+    fs.readFile(geojsonPath, 'utf8', (err, data) => {
+      if (err) {
+        return res.status(500).json({ message: 'Error reading GeoJSON file' });
+      }
+  
+      const geojson = JSON.parse(data);
+      geojson.features.unshift(newData); // Agrega el nuevo marcador al principio
+  
+      fs.writeFile(geojsonPath, JSON.stringify(geojson, null, 2), 'utf8', (err) => {
+        if (err) {
+          return res.status(500).json({ message: 'Error saving updated GeoJSON file' });
+        }
+        res.status(200).json({ message: 'GeoJSON updated successfully' });
+      });
+    });
+  });
+
+  
+
 // Iniciar el servidor en el puerto especificado
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
