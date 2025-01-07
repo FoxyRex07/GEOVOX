@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GE[V0]X</title>
+    <!-- Linkeamos leaflet para abrir el mapa -->
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="anonymous">
+    <!-- CSS linkeado -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Icono de la pagina -->
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1397/1397898.png" type="image/png">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <button class="btninfo" id="princi">
+                <img src="imagenes/info.png" alt="Informacion">
+            </button>
+
+            <img id="geovox" src="imagenes/geovoxlogo.png" alt="GE[V0]X Logo">
+
+            <div class="overlay" id="overlay-geovox"></div>
+            <div class="popup" id="popup-geovox">
+                <p>Fusiona los conceptos de "geo" (tierra o lugar) y "voz," destacando la idea de una "voz de la tierra" o un "relato del lugar." La palabra "voz," representada de forma digital al reemplazar la “o” por “0,” se combina con "flux," que significa "flujo" o "cambio continuo" en inglés. El nombre sugiere un flujo constante de voces y relatos que se acumulan y transforman el espacio, dándole una cualidad dinámica. Es como un “ecosistema de voces en cambio,” donde cada contribución afecta el “flujo” del conocimiento y la percepción del lugar.</p>
+                <button class="close-btn" id="close-geovox">Cerrar</button>
+            </div>
+            
+            <div class="search">
+                <input type="text" placeholder="Buscar...">
+                <button class="btnbus" id="buscar">
+                    <img src="imagenes/buscar.png" alt="Buscar">
+                </button>
+                <button class="btneti" id="etiqueta">
+                    <img src="imagenes/etiqueta.png" alt="Etiquetas">
+                </button>
+            </div>
+            <div class="button-list">
+                <button class="btnamo">Amor</button>
+                <button class="btndes">Desamor</button>
+                <button class="btnfel">Felicidad</button>
+                <button class="btndis">Disgusto</button>
+                <button class="btntri">Tristeza</button>
+                <button class="btneno">Enojo</button>
+                <button class="btnnos">Nostalgia</button>
+                <button class="btnang">Angustia</button>
+            </div>
+            <div class="loteria">
+                <button>Descarga Aqui Loteria del Andar</button>
+            </div>
+        
+        </div>
+        <div class="main-content">
+            <div class="top-buttons">
+                <h1>Aqui puedes subir tu historia:</h1>
+                <button id="subir">
+                    <img src="imagenes/subir.png" alt="Subir">
+                </button>
+            </div>
+            <div id="mapa"></div>
+            <div class="bottom-icons">
+                <button id="texto">
+                    <img src="imagenes/mensajero.png" alt="Textos">
+                </button>
+                <button id="audios">
+                    <img src="imagenes/volumen.png" alt="Audios">
+                </button>
+                <button id="fotos">
+                    <img src="imagenes/imagene.png" alt="Fotos">
+                </button>
+                
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="anonymous" defer></script>
+    <script type="module" src="js/scrypt.js" defer></script>
+</body>
+</html>

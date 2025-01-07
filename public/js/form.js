@@ -1,3 +1,7 @@
+document.getElementById('back-button').addEventListener('click', function () {
+  window.location.href = 'mapa'; // Cambia "pagina2.html" por la ruta deseada
+});
+
 // Variables para almacenar los datos del formulario y las coordenadas
 let title = "";
 let description = "";

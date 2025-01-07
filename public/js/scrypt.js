@@ -12,6 +12,10 @@ document.getElementById('fotos').addEventListener('click', function () {
   window.location.href = 'imagenes'; // Cambia "pagina2.html" por la ruta deseada
 });
 
+document.getElementById('princi').addEventListener('click', function () {
+  window.location.href = 'index'; // Cambia "pagina2.html" por la ruta deseada
+});
+
 //////////////////////////////////MAPA//////////////////////////////////////////////////
 
 // Variable para almacenar los datos del archivo GeoJSON
@@ -124,36 +128,6 @@ fetch('/geojson')
 
 
 ///////////////////////////////// POPUPS utilizados///////////////////////////////////////////////////////////////////
-
-  // Referencias a los elementos
-  const showPopupButton = document.getElementById('show-popup');
-  const popup = document.getElementById('popup');
-  const overlay = document.getElementById('overlay');
-  const closePopupButton = document.getElementById('close-popup');
-
-  // Función para mostrar la ventana
-  function showPopup() {
-      popup.style.display = 'block';
-      overlay.style.display = 'block';
-  }
-
-  // Función para cerrar la ventana
-  function closePopup() {
-      popup.style.display = 'none';
-      overlay.style.display = 'none';
-  }
-
-  // Evento para abrir la ventana al hacer clic en el botón
-  showPopupButton.addEventListener('click', showPopup);
-
-  // Evento para cerrar la ventana al hacer clic en el botón de cerrar
-  closePopupButton.addEventListener('click', closePopup);
-
-  // Evento para cerrar la ventana al hacer clic en el overlay
-  overlay.addEventListener('click', closePopup);
-
-  // Mostrar automáticamente la ventana al cargar el documento
-  window.addEventListener('load', showPopup);
 
   // Referencias a los elementos del nuevo popup
 const geovoxText = document.getElementById('geovox');

@@ -21,12 +21,19 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
+app.get('/mapa', (req, res) => {
+    res.sendFile(path.join(__dirname, 'mapa.html'));
+});
+
+app.get('/index', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
+
 // Ruta para servir el archivo HTML del formulario (formulario.html)
 app.get('/formulario', (req, res) => {
     res.sendFile(path.join(__dirname, 'formulario.html'));
 });
 
-// Ruta para servir el archivo HTML del Mapa (Mapa.html)
 app.get('/audios', (req, res) => {
     res.sendFile(path.join(__dirname, 'audios.html'));
 });

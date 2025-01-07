@@ -46,7 +46,7 @@ body {
     align-items: center;
 }
 
-#show-popup img{
+#princi img{
     width:40px;
     height:auto;
     border-radius: 100%;
@@ -100,6 +100,23 @@ body {
     height:auto;
 }
 
+.loteria{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+    max-height: 500px; /* Ajustar altura máxima de la lista */
+    padding-right: 10px;
+}
+.loteria button{
+    padding: 10px;
+    border: none;
+    background-color: #d1c1ae;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+}
+
 /* Listado de tematicas */
 .button-list {
     display: flex;
@@ -117,6 +134,37 @@ body {
     color: white;
     cursor: pointer;
     text-align: center;
+}
+.button-list button.btnamo:hover {
+    background-color:#ff72d2;
+}
+
+.button-list button.btndes:hover {
+    background-color:#b966e9;
+}
+
+.button-list button.btnfel:hover {
+    background-color:#e9d366;
+}
+
+.button-list button.btndis:hover {
+    background-color:#92e966;
+}
+
+.button-list button.btntri:hover {
+    background-color:#66c8e9;
+}
+
+.button-list button.btneno:hover {
+    background-color:#e96666;
+}
+
+.button-list button.btnnos:hover {
+    background-color:#c1beb6;
+}
+
+.button-list button.btnang:hover {
+    background-color:#e98566;
 }
 
 .button-list button:hover {

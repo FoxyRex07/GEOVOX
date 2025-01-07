@@ -7,7 +7,7 @@
       "properties": {
         "title": "UAM",
         "description": "Esta es la UAM y tu punto de referencia",
-        "markerType": "purple"
+        "markerType": "yellow"
       },
       "geometry": {
         "coordinates": [
