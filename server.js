@@ -115,6 +115,7 @@ app.post('/update-geojson', (req, res) => {
         }
         res.status(200).json({ message: 'GeoJSON updated successfully' });
       });
+      res.redirect('/mapa');
     });
   });
 

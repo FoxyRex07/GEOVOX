@@ -86,6 +86,7 @@ document.getElementById('save-button').addEventListener('click', () => {
     .then(data => {
       alert(data.message); // Mostrar el mensaje de éxito enviado por el servidor
       console.log("GeoJSON actualizado:", data); // Mostrar los datos en la consola para depuración
+      window.location.href = 'mapa';
     })
     .catch(error => {
       console.error('Error:', error); // Mostrar un error en la consola si algo falla
