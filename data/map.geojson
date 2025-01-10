@@ -4,6 +4,51 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "Tacos",
+        "description": "Aca un dia nos regalaron tacos",
+        "markerType": "yellow"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.51126015183037,
+          19.286071259140204
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "PAZ",
+        "description": "Aqui da clase paz :c",
+        "markerType": "orange"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.49605846391933,
+          19.29220738329434
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Me enamore",
+        "description": "Me enamore de Oscar XD jajaja Saludos ",
+        "markerType": "pink"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.50170183168666,
+          19.291701064426594
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "UAM",
         "description": "Esta es la UAM y tu punto de referencia",
         "markerType": "yellow"

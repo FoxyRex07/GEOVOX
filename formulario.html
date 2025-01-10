@@ -5,85 +5,127 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GEOVOX Formulario</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
   <!-- Estilo para el mapa -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="/css/form.css">
+  <link rel="icon" type="image/png" href="imagenes/geovoxicon.png">
 </head>
 
 <body>
   <header>
-      <!-- Título de la página -->
-    <h1 style="text-align: center;">Sube tu anecdota</h1>
+    <div class="logo">
+      <img src="imagenes/logoa.png" alt="GeoVox">
+    </div>
+    <h1>¡Sube tu historia!</h1>
   </header>
 
-  <!-- Formulario para ingresar datos -->
-  <form id="data-form">
-    <label for="title">Título:</label>
-    <input type="text" id="title" name="title" required /> <!-- Campo de texto para el título -->
+  <main>
+    <section class="instructions">
+      <h2>Indicaciones</h2>
+      <p>
+        Para que tu historia sea identificable debes de agregarle un título significativo de ella, una vez hecho esto es hora de compartir tus emociones, anécdotas o reflexiones sobre cualquier tema que haya marcado tu vida. Sé tan detallado como desees. 
+        Si lo deseas, puedes incluir imágenes y/o audios relacionados con tu experiencia. 
+        Ubica tu historia en el mapa y finalmente selecciona un marcador relacionado a la emoción relacionada a tu anécdota. 
+        Revisa y haz click en el botón de guardar datos.
+      </p>
+    </section>
 
-    <label for="description">Descripción:</label>
-    <textarea id="description" name="description" rows="4" required></textarea> <!-- Campo de texto para la descripción -->
+    <form id="data-form">
+      <!-- Primera fila con título e imagen -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="titulo">Título de tu anécdota:</label>
+          <input type="text" id="title" name="title" placeholder="Escribe el título aquí" required/>
+        </div>
 
-    <label for="image">Subir imagen:</label>
-    <input type="file" id="image" name="image" accept="image/*"/>
-
-    <label for="audio">Subir audio:</label>
-    <input type="file" id="audio" name="audio" accept="audio/*"/>
-    
-    
-    <!-- Seleccionar el tipo de marcador -->
-
-    <label for="marker-type">Selecciona el tipo de marcador:</label>
-      <div id="marker-options" class="marker-options">
-
-        <input type="radio" id="red-marker" name="marker-type" value="red" required>
-          <label for="red-marker">
-            <img src="imagenes/red.png" alt="Marcador rojo" title="Marcador rojo">
-          </label>
-
-        <input type="radio" id="blue-marker" name="marker-type" value="blue" required>
-          <label for="blue-marker">
-            <img src="imagenes/blue.png" alt="Marcador azul" title="Marcador azul">
-          </label>
-
-        <input type="radio" id="green-marker" name="marker-type" value="green" required>
-          <label for="green-marker">
-            <img src="imagenes/green.png" alt="Marcador verde" title="Marcador verde">
-          </label>
-
-        <input type="radio" id="purple-marker" name="marker-type" value="purple" required>
-          <label for="purple-marker">
-            <img src="imagenes/purple.png" alt="Marcador morado" title="Marcador morado">
-          </label>
-
-        <input type="radio" id="gray-marker" name="marker-type" value="gray" required>
-          <label for="gray-marker">
-            <img src="imagenes/gray.png" alt="Marcador gris" title="Marcador gris">
-          </label>
-        
-        <input type="radio" id="orange-marker" name="marker-type" value="orange" required>
-          <label for="orange-marker">
-            <img src="imagenes/orange.png" alt="Marcador naranja" title="Marcador naranja">
-          </label>
-
-        <input type="radio" id="pink-marker" name="marker-type" value="pink" required>
-          <label for="pink-marker">
-            <img src="imagenes/pink.png" alt="Marcador rosa" title="Marcador rosa">
-          </label>
-
-        <input type="radio" id="yellow-marker" name="marker-type" value="yellow" required>
-          <label for="yellow-marker">
-            <img src="imagenes/yellow.png" alt="Marcador amarillo" title="Marcador amarillo">
-          </label>
+        <div class="form-group">
+          <label for="imagen">Sube una imagen:</label>
+          <input type="file" id="image" name="image"/>
+        </div>
       </div>
 
-    <!-- Div para mostrar el mapa -->
-    <div id="map"></div>
+      <!-- Segunda fila con descripción y audio -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="descripcion">Descripción:</label>
+          <textarea id="description" name="description" placeholder="Escribe la descripción aquí" rows="4" required></textarea>
+        </div>
 
-    <!-- Botón para guardar los datos -->
-    <button type="button" id="save-button">Guardar Datos</button>
-    <button type="button" id="back-button">Volver al Inicio</button>
-  </form>
+        <div class="form-groupaud" id="aud">
+          <label for="audio">Sube un audio:</label>
+          <input type="file" id="audio" name="audio"/>
+        </div>
+      </div>
+
+      <!-- Selección de marcadores -->
+      <label for="marker-type">Selecciona el tipo de marcador:</label>
+      <div id="marker-options" class="marker-options">
+        <input type="radio" id="red-marker" name="marker-type" value="red" required>
+        <label for="red-marker">
+          <img src="imagenes/redpin.png" alt="Marcador rojo" title="Enojo">
+        </label>
+
+        <input type="radio" id="blue-marker" name="marker-type" value="blue" required>
+        <label for="blue-marker">
+          <img src="imagenes/bluepin.png" alt="Marcador azul" title="Marcador azul">
+        </label>
+
+        <input type="radio" id="green-marker" name="marker-type" value="green" required>
+        <label for="green-marker">
+          <img src="imagenes/greenpin.png" alt="Marcador verde" title="Marcador verde">
+        </label>
+
+        <input type="radio" id="purple-marker" name="marker-type" value="purple" required>
+        <label for="purple-marker">
+          <img src="imagenes/purplepin.png" alt="Marcador morado" title="Marcador morado">
+        </label>
+
+        <input type="radio" id="gray-marker" name="marker-type" value="gray" required>
+        <label for="gray-marker">
+          <img src="imagenes/graypin.png" alt="Marcador gris" title="Marcador gris">
+        </label>
+
+        <input type="radio" id="orange-marker" name="marker-type" value="orange" required>
+        <label for="orange-marker">
+          <img src="imagenes/orangepin.png" alt="Marcador naranja" title="Marcador naranja">
+        </label>
+
+        <input type="radio" id="pink-marker" name="marker-type" value="pink" required>
+        <label for="pink-marker">
+          <img src="imagenes/pinkpin.png" alt="Marcador rosa" title="Marcador rosa">
+        </label>
+
+        <input type="radio" id="yellow-marker" name="marker-type" value="yellow" required>
+        <label for="yellow-marker">
+          <img src="imagenes/yellowpin.png" alt="Marcador amarillo" title="Marcador amarillo">
+        </label>
+      </div>
+
+      <!-- Div para mostrar el mapa -->
+      <div id="map"></div>
+
+      <!-- Botones para guardar y regresar -->
+      <div class="form-buttons">
+        <button type="button" id="save-button">Guardar Datos</button>
+        <button type="button" id="back-button">Volver al Inicio</button>
+      </div>
+
+      <div class="grax">
+        <p>
+          Recuerda revisar tus datos antes de dar click en “Guardar datos”, si ya lo haz hecho muchas gracias por participar y compartir tu historia, la guardaremos con mucho cariño y respeto.
+        </p>
+        <div>
+          <img src="imagenes/logob.png" alt="GeoVox"id="logob">
+        </div>
+      </div>
+
+    </form>
+  </main>
 
   <!-- Scripts necesarios para Leaflet y funcionalidad del mapa -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>

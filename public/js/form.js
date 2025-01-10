@@ -42,6 +42,7 @@ document.getElementById('save-button').addEventListener('click', () => {
   // Obtener los valores del formulario
   title = document.getElementById('title').value;
   description = document.getElementById('description').value;
+
     // Obtener la opción seleccionada
     const markerType = document.querySelector('input[name="marker-type"]:checked').value;
 

@@ -91,8 +91,36 @@ app.post('/update-geojson', (req, res) => {
                 // Si hay un error al guardar el archivo, devolver error 500
                 return res.status(500).json({ message: 'Error saving updated GeoJSON file' });
             }
-            // Responder con un mensaje de éxito
-            res.status(200).json({ message: 'GeoJSON updated successfully' });
+ //////////////////////////////////texto///////////////////////////////////////////////
+            const htmlPath = path.join(__dirname, 'texto.html');
+                    fs.readFile(htmlPath, 'utf8', (htmlErr, htmlData) => {
+                        if (htmlErr) {
+                            console.error('Error reading HTML file:', htmlErr);
+                            return res.status(500).json({ error: 'Error reading HTML file' });
+                        }
+
+                        const newEntryHtml = `
+                            <div class="entry">
+                                <h2>${newData.properties.title}</h2>
+                                <p>${newData.properties.description}</p>
+                            </div>
+                        `;
+
+                        const updatedHtml = htmlData.replace(
+                            '</div>',
+                            `${newEntryHtml}\n</div>`
+                        );
+
+                        fs.writeFile(htmlPath, updatedHtml, 'utf8', (writeHtmlErr) => {
+                            if (writeHtmlErr) {
+                                console.error('Error writing HTML file:', writeHtmlErr);
+                                return res.status(500).json({ error: 'Error writing HTML file' });
+                            }
+
+                            console.log('HTML updated successfully.');
+                            res.status(200).json({ message: 'Muchas gracias por compartir tu historia, ya esta en subida en la pagina de inicio' });
+                        });
+                    });
         });
     });
 });
@@ -119,7 +147,7 @@ app.post('/update-geojson', (req, res) => {
     });
   });
 
-  
+
 
 // Iniciar el servidor en el puerto especificado
 app.listen(port, () => {
