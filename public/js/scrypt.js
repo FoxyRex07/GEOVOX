@@ -16,6 +16,30 @@ document.getElementById('princi').addEventListener('click', function () {
   window.location.href = 'index'; // Cambia "pagina2.html" por la ruta deseada
 });
 
+document.getElementById('amor').addEventListener('click', function () {
+  window.location.href = 'amor'; // Cambia "pagina2.html" por la ruta deseada
+});
+document.getElementById('desamor').addEventListener('click', function () {
+  window.location.href = 'desamor'; // Cambia "pagina2.html" por la ruta deseada
+});
+document.getElementById('felicidad').addEventListener('click', function () {
+  window.location.href = 'felicidad'; // Cambia "pagina2.html" por la ruta deseada
+});
+document.getElementById('disgusto').addEventListener('click', function () {
+  window.location.href = 'disgusto'; // Cambia "pagina2.html" por la ruta deseada
+});
+document.getElementById('tristeza').addEventListener('click', function () {
+  window.location.href = 'tristeza'; // Cambia "pagina2.html" por la ruta deseada
+});
+document.getElementById('enojo').addEventListener('click', function () {
+  window.location.href = 'enojo'; // Cambia "pagina2.html" por la ruta deseada
+});
+document.getElementById('nostalgia').addEventListener('click', function () {
+  window.location.href = 'nostalgia'; // Cambia "pagina2.html" por la ruta deseada
+});
+document.getElementById('angustia').addEventListener('click', function () {
+  window.location.href = 'angustia'; // Cambia "pagina2.html" por la ruta deseada
+});
 //////////////////////////////////MAPA//////////////////////////////////////////////////
 
 // Variable para almacenar los datos del archivo GeoJSON

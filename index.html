@@ -104,6 +104,29 @@
         footer img:hover{
             transform: translate(-50%, -50%) scale(1.1);
         }
+        @media (max-width: 768px) {
+            header {
+                padding: 20px 0;
+            }
+            header h2 {
+                font-size: 1.2rem;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+            footer {
+                height: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .content {
+                flex-direction: column;
+            }
+            footer img {
+                width: 100px;
+            }
+        }
     </style>
     <link rel="icon" type="image/png" href="imagenes/geovoxicon.png">
 </head>

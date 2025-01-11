@@ -153,35 +153,35 @@ h1 {
     text-align: center;
 }
 .button-list button.btnamo:hover {
-    background-color:#ff72d2;
+    background-color:#efa0c6;
 }
 
 .button-list button.btndes:hover {
-    background-color:#b966e9;
+    background-color:#c5abdd;
 }
 
 .button-list button.btnfel:hover {
-    background-color:#e9d366;
+    background-color:#f4d37d;
 }
 
 .button-list button.btndis:hover {
-    background-color:#92e966;
+    background-color:#97c67b;
 }
 
 .button-list button.btntri:hover {
-    background-color:#66c8e9;
+    background-color:#99ccff;
 }
 
 .button-list button.btneno:hover {
-    background-color:#e96666;
+    background-color:#e26d6d;
 }
 
 .button-list button.btnnos:hover {
-    background-color:#c1beb6;
+    background-color:#d3cfc4;
 }
 
 .button-list button.btnang:hover {
-    background-color:#e98566;
+    background-color:#f99969;
 }
 
 .button-list button:hover {

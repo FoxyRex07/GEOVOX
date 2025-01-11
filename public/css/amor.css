@@ -1,0 +1,143 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #efa0c6;
+    color: #333;
+}
+
+header {
+    font-family: "Bebas Neue", serif;
+    font-style:normal;
+    font-size: 300%;
+    background-color: #d394c5;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+
+header .logo img {
+    max-height: 200px;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    margin: 0px auto;
+    border-radius: 8px;
+    max-width: 85%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.txtamor {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    margin: 6%;
+    font-size: 120%;
+    text-align: justify;
+    line-height: 1cm;
+}
+
+.separator {
+    border-top: 1px solid #5c5b5b;
+    margin: 20px 0;
+}
+
+.separator1 {
+    border-top: 1px solid #5c5b5b;
+    margin-top: 7%;
+}
+
+.story {
+    display: flex;
+    align-items: center; /* Alinea los elementos verticalmente */
+    margin-bottom: 20px;
+}
+
+.story-content {
+    flex: 1; /* El texto y el título ocuparán el espacio restante */
+    margin-left: 3%;
+}
+
+.story-title {
+    font-family: "Bebas Neue", serif;
+    font-style: normal;
+    font-size: 300%;
+    font-weight:400;
+    color: #333;
+    margin-bottom: 4%; /* Espacio entre el título y el texto */
+    margin-left: 5%;
+}
+
+.story-text {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 115%;
+    margin: 0; /* Sin margen alrededor del texto */
+    padding: 0; /* Sin padding dentro del texto */
+    flex: 1; /* Ocupa el espacio restante */
+    margin-right: 5%;
+    margin-left: 2%;
+    line-height: 1cm;
+
+}
+
+.icons img {
+    max-width: 300px; /* Tamaño máximo de la imagen */
+    height: auto;
+    margin-left: 20px; /* Espacio entre la imagen y el texto */
+}
+
+.footer {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer img {
+    width: 18%;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        font-size: 1.5rem;
+    }
+
+    .story {
+        flex-direction: column;
+    }
+
+    .story-title {
+        font-size: 1.25rem;
+    }
+
+    .txtamor {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 1.25rem;
+    }
+
+    .story-title {
+        font-size: 1rem;
+    }
+
+    .txtamor {
+        font-size: 0.8rem;
+    }
+
+    .footer img {
+        width: 18%;
+    }
+}

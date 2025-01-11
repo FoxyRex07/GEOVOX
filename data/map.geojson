@@ -4,6 +4,21 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "jkhkjnm",
+        "description": "+4651",
+        "markerType": "purple"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.51108741734063,
+          19.28822917639406
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "Tacos",
         "description": "Aca un dia nos regalaron tacos",
         "markerType": "yellow"

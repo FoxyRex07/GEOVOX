@@ -46,6 +46,30 @@ app.get('/texto', (req, res) => {
     res.sendFile(path.join(__dirname, 'texto.html'));
 });
 
+app.get('/nostalgia', (req, res) => {
+    res.sendFile(path.join(__dirname, 'etiquetas/nostalgia.html'));
+});
+app.get('/angustia', (req, res) => {
+    res.sendFile(path.join(__dirname, 'etiquetas/angustia.html'));
+});
+app.get('/amor', (req, res) => {
+    res.sendFile(path.join(__dirname, 'etiquetas/amor.html'));
+});
+app.get('/desamor', (req, res) => {
+    res.sendFile(path.join(__dirname, 'etiquetas/desamor.html'));
+});
+app.get('/tristeza', (req, res) => {
+    res.sendFile(path.join(__dirname, 'etiquetas/tristeza.html'));
+});
+app.get('/disgusto', (req, res) => {
+    res.sendFile(path.join(__dirname, 'etiquetas/disgusto.html'));
+});
+app.get('/felicidad', (req, res) => {
+    res.sendFile(path.join(__dirname, 'etiquetas/felicidad.html'));
+});
+app.get('/enojo', (req, res) => {
+    res.sendFile(path.join(__dirname, 'etiquetas/enojo.html'));
+});
 /////////////////////////////////////// PROCESOS ///////////////////////////////////////////
 
 // Endpoint para obtener el archivo GeoJSON
