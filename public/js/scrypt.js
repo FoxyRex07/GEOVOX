@@ -40,6 +40,19 @@ document.getElementById('nostalgia').addEventListener('click', function () {
 document.getElementById('angustia').addEventListener('click', function () {
   window.location.href = 'angustia'; // Cambia "pagina2.html" por la ruta deseada
 });
+
+
+////////////////////////////LOTERIA////////////////////////////
+
+document.getElementById('download-pdf-btn').addEventListener('click', function () {
+  const link = document.createElement('a');
+  link.href = '/pdf/Loteria.pdf'; // Ruta del archivo PDF
+  link.download = 'Loteria_del_Andar.pdf'; // Nombre del archivo descargado
+  document.body.appendChild(link); // Agregar el enlace al DOM
+  link.click(); // Forzar el clic para iniciar la descarga
+  document.body.removeChild(link); // Eliminar el enlace después de la descarga
+});
+
 //////////////////////////////////MAPA//////////////////////////////////////////////////
 
 // Variable para almacenar los datos del archivo GeoJSON

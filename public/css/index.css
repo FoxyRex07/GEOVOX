@@ -1,0 +1,187 @@
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FDF4ED;
+            color: #333;
+        }
+        header {
+            background-color: #d7d7d7;
+            text-align: center;
+            padding: 40px 0;
+            height: 635px;
+            background-image: url('encabezado.jpg');
+        }
+        header img {
+            margin-top: 10%;
+        }
+        footer img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            z-index: 2;
+        }
+
+        header h2 {
+            font-family: "Playfair Display", serif;
+            font-optical-sizing: auto;
+            font-weight: 100;
+            font-style: normal;
+            margin: 0px 0 0;
+            font-size: 200%;
+        }
+        p {
+            font-family: "Playfair Display", serif;
+            font-optical-sizing: auto;
+            font-weight: 100;
+            font-style: normal;
+            font-size: 100%;
+        }
+        section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-family: "Bebas Neue", serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 500%;
+            margin: 20px 0;
+        }
+
+        .section-title2 {
+            text-align: right;
+            font-family: "Bebas Neue", serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 500%;
+            margin: 20px 0;
+        }
+
+        .titu{
+            display: block;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .content img {
+            max-width: 40%;
+            height: auto;
+        }
+
+        #prop{
+            max-width: 20%;
+            height: auto;
+            margin-left: 10%;
+        }
+
+        #proptx{
+            margin-left: 0%;
+        }
+
+        .content .text {
+            max-width: 55%;
+        }
+        .content img.circle {
+            border-radius: 50%;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .grid img {
+            width: 100%;
+            height: auto;
+        }
+        footer {
+            position: relative;
+            height: 500px;
+            background-image: url('map.png');
+            background-size: cover;
+            filter:brightness(90%);/* Otro filtro en el fondo */
+        }
+        footer img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            z-index: 2;
+            cursor: pointer; /* Cambia el cursor al ícono de mano */
+            transition: transform 0.3s; /* Agrega un efecto suave */
+            transform-origin: center;
+        }
+        footer img:hover{
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        .divider {
+            border-top: 2px solid black;
+            margin: 20px 0;
+            width: 58%;
+        }
+
+        .divider2 {
+            border-top: 2px solid black; /* Línea de división */
+            margin: 40px auto; /* Control del espacio arriba y abajo */
+            width: 58%; /* Ajusta el ancho de la línea */
+            margin-left: auto; /* Empuja la línea hacia la derecha */
+            margin-right: 1%; 
+        }
+
+        .section {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+
+        .section:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .text {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .image-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            max-width: 350px;
+            border-radius: 8px;
+        }
+
+        /* Específicamente para las proporciones */
+        .image-vertical {
+            max-height: 500px; /* Imagen rectangular vertical */
+        }
+
+        .image-horizontal {
+            max-height: 300px; /* Imagen rectangular horizontal */
+        }
+
+.textofin{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    text-align: center;
+}

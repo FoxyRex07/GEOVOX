@@ -12,6 +12,7 @@
 
   <!-- Estilo para el mapa -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/css/form.css">
   <link rel="icon" type="image/png" href="imagenes/geovoxicon.png">
 </head>
@@ -35,7 +36,7 @@
       </p>
     </section>
 
-    <form id="data-form">
+    <form id="data-form" action="/upload-image" method="POST" enctype="multipart/form-data">
       <!-- Primera fila con título e imagen -->
       <div class="form-row">
         <div class="form-group">
@@ -44,11 +45,10 @@
         </div>
 
         <div class="form-group">
-          <label for="imagen">Sube una imagen:</label>
-          <input type="file" id="image" name="image"/>
+          <label for="image">Sube una imagen:</label>
+          <input type="file" id="image" name="image" accept="image/*"/>
         </div>
       </div>
-
       <!-- Segunda fila con descripción y audio -->
       <div class="form-row">
         <div class="form-group">
@@ -112,7 +112,7 @@
 
       <!-- Botones para guardar y regresar -->
       <div class="form-buttons">
-        <button type="button" id="save-button">Guardar Datos</button>
+        <button type ="submit" id="save-button">Guardar Datos</button>
         <button type="button" id="back-button">Volver al Inicio</button>
       </div>
 

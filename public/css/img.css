@@ -10,17 +10,27 @@ body {
 header {
     text-align: center;
     padding: 20px;
-    background-color: #ff4949;
+    background-color: #8B94AA;
     color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+header .logo img {
+    max-height: 200px;
 }
 
 header h1 {
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 500%;
     margin: 0;
-    font-size: 2rem;
 }
 
 /* Diseño de la galería */
-.gallery {
+.image-gallery {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
@@ -30,7 +40,7 @@ header h1 {
 }
 
 /* Asegurar que las imágenes sean responsivas */
-.gallery img {
+.image-entry img {
     width: 100%;
     height: auto;
     border-radius: 10px;
@@ -39,7 +49,7 @@ header h1 {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.gallery img:hover {
+.image-entry img:hover {
     transform: scale(1.1);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }

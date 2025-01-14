@@ -5,6 +5,7 @@ const fs = require('fs');           // Módulo para trabajar con el sistema de a
 const app = express();              // Crear la aplicación Express
 const port = 3000;                  // Puerto donde el servidor escuchará
 const cors = require('cors');       // Middleware para habilitar CORS (Cross-Origin Resource Sharing)
+const multer = require('multer');
 
 // Middleware para parsear cuerpos de solicitud en formato JSON
 app.use(express.json());
@@ -171,6 +172,99 @@ app.post('/update-geojson', (req, res) => {
     });
   });
 
+
+  ////////////////////////Imagenes//////////////////////////////////////////
+
+  // Configuración de almacenamiento para Multer
+const storage = multer.diskStorage({
+    destination: './uploads/', // Carpeta de destino
+    filename: (req, file, cb) => {
+      cb(null, `${Date.now()}_${file.originalname}`); // Renombrar archivo para evitar conflictos
+    },
+  });
+  
+  const upload = multer({
+    storage,
+    limits: { fileSize: 5 * 1024 * 1024 }, // Tamaño máximo: 5 MB
+    fileFilter: (req, file, cb) => {
+      const fileTypes = /jpeg|jpg|png/;
+      const extName = fileTypes.test(path.extname(file.originalname).toLowerCase());
+      const mimeType = fileTypes.test(file.mimetype);
+  
+      if (extName && mimeType) {
+        return cb(null, true);
+      }
+      cb(new Error('¡Solo se permiten imágenes (jpeg, jpg, png)!'));
+    },
+  });
+  
+  // Middleware para servir archivos estáticos
+  app.use(express.static(path.join(__dirname, 'public')));
+  app.use('/uploads', express.static('uploads'));
+  
+  // Ruta para servir el archivo HTML de imágenes
+  app.get('/imagenes', (req, res) => {
+    res.sendFile(path.join(__dirname, 'imagenes.html'));
+  });
+  
+  // Endpoint para subir imágenes y actualizar el HTML
+  app.post('/upload-image', upload.single('image'), (req, res) => {
+    if (!req.file) {
+      console.error('No se subió ninguna imagen.');
+      return res.status(400).json({ message: 'Por favor, sube una imagen válida.' });
+    }
+  
+    const imagePath = `/uploads/${req.file.filename}`;
+    const htmlPath = path.join(__dirname, 'imagenes.html');
+  
+    // Leer y actualizar el archivo HTML de imágenes
+    fs.readFile(htmlPath, 'utf8', (err, data) => {
+      if (err) {
+        console.error('Error al leer el archivo HTML de imágenes:', err.message);
+        return res.status(500).json({ message: 'Error al leer el archivo HTML.' });
+      }
+  
+      // Verificar si el contenedor de imágenes existe; si no, lo añade
+      let updatedHtml = data;
+      if (!data.includes('<div class="image-gallery">')) {
+        updatedHtml = data.replace(
+          '</body>',
+          `
+          <div class="image-gallery">
+            <!-- Las imágenes se agregarán aquí -->
+          </div>
+          </body>`
+        );
+      }
+  
+      // Agregar la nueva imagen dentro del contenedor
+      const newImageHtml = `
+        <div class="image-entry">
+          <img src="${imagePath}" alt="Imagen subida" style="width: 100%; max-width: 300px;" />
+        </div>
+      `;
+      updatedHtml = updatedHtml.replace(
+        '<div class="image-gallery">',
+        `<div class="image-gallery">\n${newImageHtml}`
+      );
+  
+      // Guardar el archivo HTML actualizado
+      fs.writeFile(htmlPath, updatedHtml, 'utf8', (writeErr) => {
+        if (writeErr) {
+          console.error('Error al guardar el archivo HTML de imágenes:', writeErr.message);
+          return res.status(500).json({ message: 'Error al guardar el archivo HTML.' });
+        }
+  
+        console.log('Imagen añadida al archivo HTML correctamente.');
+        res.status(200).json({ message: 'Imagen subida y añadida correctamente.', imageUrl: imagePath });
+      });
+    });
+  });  
+
+
+  
+  // Servir los archivos subidos desde la carpeta 'uploads'
+  app.use('/uploads', express.static('uploads'));
 
 
 // Iniciar el servidor en el puerto especificado

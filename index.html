@@ -7,127 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #FDF4ED;
-            color: #333;
-        }
-        header {
-            background-color: #d7d7d7;
-            text-align: center;
-            padding: 40px 0;
-            height: 500px;
-        }
-        footer img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 500px;
-            z-index: 2;
-        }
-        header h2 {
-            font-family: "Playfair Display", serif;
-            font-optical-sizing: auto;
-            font-weight: 100;
-            font-style: normal;
-            margin: 0px 0 0;
-            font-size: 200%;
-        }
-        p {
-            font-family: "Playfair Display", serif;
-            font-optical-sizing: auto;
-            font-weight: 100;
-            font-style: normal;
-            font-size: 100%;
-        }
-        section {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-            margin-bottom: 20px;
-        }
-        .section-title {
-            font-family: "Bebas Neue", serif;
-            font-weight: 400;
-            font-style: normal;
-            font-size: 500%;
-            margin: 20px 0;
-        }
-        .content {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-        }
-        .content img {
-            max-width: 40%;
-            height: auto;
-        }
-        .content .text {
-            max-width: 55%;
-        }
-        .content img.circle {
-            border-radius: 50%;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
-            margin-top: 20px;
-        }
-        .grid img {
-            width: 100%;
-            height: auto;
-        }
-        footer {
-            position: relative;
-            height: 500px;
-            background-image: url('imagenes/map.png');
-            background-size: cover;
-            filter:brightness(90%);/* Otro filtro en el fondo */
-        }
-        footer img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 500px;
-            z-index: 2;
-            cursor: pointer; /* Cambia el cursor al ícono de mano */
-            transition: transform 0.3s; /* Agrega un efecto suave */
-            transform-origin: center;
-        }
-        footer img:hover{
-            transform: translate(-50%, -50%) scale(1.1);
-        }
-        @media (max-width: 768px) {
-            header {
-                padding: 20px 0;
-            }
-            header h2 {
-                font-size: 1.2rem;
-            }
-            .section-title {
-                font-size: 1.5rem;
-            }
-            footer {
-                height: 200px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .content {
-                flex-direction: column;
-            }
-            footer img {
-                width: 100px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="/css/index.css">
     <link rel="icon" type="image/png" href="imagenes/geovoxicon.png">
 </head>
 <body>
@@ -137,60 +17,71 @@
     </header>
 
     <section>
-        <h2 class="section-title">¡HOLA!</h2>
-        <div class="content">
-            <div class="text">
-                <p>Carta de presentación + Statement</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="container">
+            <!-- Sección ¡HOLA! -->
+            <div class="section">
+                <div class="text">
+                    <h2 class="section-title">¡HOLA!</h2>
+                    <h2>Carta de presentación + Statement</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit.</p>
+                </div>
+                <div class="image-container">
+                    <img src="imagenes/cirlar.png" alt="Imagen vertical sección Hola" class="image-vertical">
+                </div>
             </div>
-            <img src="imagenes/lu.jpg" alt="Circular Image Placeholder" class="circle">
+    
+            <div class="divider"></div>
+    
+            <!-- Sección ¿QUÉ ES? -->
+            <div class="section">
+                <div class="text">
+                    <h2 class="section-title">¿QUÉ ES?</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit.</p>
+                </div>
+                <div class="image-container">
+                    <img src="imagenes/lo.jpg" alt="Imagen horizontal sección Qué es" class="image-horizontal">
+                </div>
+            </div>
         </div>
     </section>
 
     <section>
-        <h2 class="section-title">¿QUÉ ES?</h2>
+        <h2 class="section-title2">PROPÓSITO</h2>
         <div class="content">
-            <div class="text">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-            </div>
-            <img src="imagenes/lui.jpg" alt="Image Placeholder">
-        </div>
-    </section>
+            <img src="imagenes/aaaaa.jpg" alt="Image Placeholder" id="prop">
 
-    <section>
-        <h2 class="section-title">PROPÓSITO</h2>
-        <div class="content">
-            <div class="text">
+            <div class="text" id="proptx">
                 <p>Propositos | Que buscamos hacer</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
-            <img src="imagenes/luis.jpg" alt="Image Placeholder">
+            
         </div>
-    </section>
 
-    <section>
-        <h2 class="section-title">LOTERÍA DEL ANDAR</h2>
+        <div class="divider2"></div>
+
+        <h2 class="section-title2">LOTERÍA DEL ANDAR</h2>
         <div class="content">
             <div class="text">
                 <p>Que es + En que consistió + que hicimos + Alcances a futuro</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
             </div>
-            <img src="imagenes/luism.jpg" alt="Image Placeholder">
+            <img src="imagenes/lot.jpg" alt="Image Placeholder" id="">
         </div>
-
+        <div class="textofin">
+            <p>No se que va aca</p>
+        </div>
         <div class="grid">
-            <img src="imagenes/luismi.jpg" alt="Grid Image Placeholder">
-            <img src="imagenes/luism.jpg" alt="Grid Image Placeholder">
-            <img src="imagenes/luis.jpg" alt="Grid Image Placeholder">
-            <img src="imagenes/lui.jpg" alt="Grid Image Placeholder">
+            <img src="imagenes/uno.jpg" alt="Grid Image Placeholder">
+            <img src="imagenes/dos.jpg" alt="Grid Image Placeholder">
+            <img src="imagenes/tres.jpg" alt="Grid Image Placeholder">
+            <img src="imagenes/cuatro.jpg" alt="Grid Image Placeholder">
         </div>
     </section>
 
     <section>
         <h2 class="section-title">Conoce nuestra plataforma</h2>
-        <img src="imagenes/lu.jpg" alt="Map Image Placeholder" style="width: 100%;">
     </section>
 
     <footer>
