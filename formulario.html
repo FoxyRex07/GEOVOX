@@ -37,7 +37,7 @@
     </section>
 
     <form id="data-form" action="/upload-image" method="POST" enctype="multipart/form-data">
-      <!-- Primera fila con título e imagen -->
+      
       <div class="form-row">
         <div class="form-group">
           <label for="titulo">Título de tu anécdota:</label>
@@ -49,7 +49,7 @@
           <input type="file" id="image" name="image" accept="image/*"/>
         </div>
       </div>
-      <!-- Segunda fila con descripción y audio -->
+      
       <div class="form-row">
         <div class="form-group">
           <label for="descripcion">Descripción:</label>
@@ -62,7 +62,7 @@
         </div>
       </div>
 
-      <!-- Selección de marcadores -->
+      
       <label for="marker-type">Selecciona el tipo de marcador:</label>
       <div id="marker-options" class="marker-options">
         <input type="radio" id="gray-marker" name="marker-type" value="gray" required>

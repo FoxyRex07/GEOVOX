@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.target.tagName === 'IMG') {
             const img = e.target;
 
-            // Crear el modal
             const modal = document.createElement('div');
             modal.style.position = 'fixed';
             modal.style.top = '0';
@@ -22,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
             modal.style.alignItems = 'center';
             modal.style.zIndex = '1000';
 
-            // Crear la imagen grande
             const largeImage = document.createElement('img');
             largeImage.src = img.src;
             largeImage.style.maxWidth = '90%';
@@ -34,7 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
             modal.appendChild(largeImage);
             document.body.appendChild(modal);
 
-            // Cerrar el modal al hacer clic
             modal.addEventListener('click', () => {
                 modal.remove();
             });

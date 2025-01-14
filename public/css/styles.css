@@ -11,12 +11,11 @@ body {
     width: 100%;
 }
 
-/* Imagen de Titulo */
 #geovox {
     display: block;
-    margin: 0 auto; /* Centra la imagen */
-    max-width: 250px; /* Tamaño máximo */
-    width: 100%; /* Escala con el contenedor */
+    margin: 0 auto;
+    max-width: 250px; 
+    width: 100%; 
   }
 
 /* barra de la izquierda */
@@ -266,8 +265,6 @@ h1 {
     background: none;
     cursor: pointer;
 }
-
-
 
 /* MAPA */
 /* Estilo para el mapa */
