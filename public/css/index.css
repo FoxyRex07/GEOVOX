@@ -164,12 +164,6 @@
             padding: 20px;
         }
 
-        .image-container img {
-            width: 100%;
-            height: auto;
-            max-width: 350px;
-            border-radius: 8px;
-        }
 
         /* Específicamente para las proporciones */
         .image-vertical {
@@ -184,4 +178,58 @@
     margin-top: 10%;
     margin-bottom: 10%;
     text-align: center;
+}
+/* Estilos para el modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000; /* Por encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+}
+
+.modal-content {
+    display: block;
+    margin: auto;
+    margin-top: 3%;
+    max-width: 100%; /* Ajusta el tamaño máximo */
+    max-height: 100%;
+    animation: fadeIn 0.3s ease-in-out; /* Animación */
+}
+
+#caption {
+    color: #ccc;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

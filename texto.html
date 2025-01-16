@@ -3,33 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Entradas</title>
-  <link rel="stylesheet" href="texto.css">
+  <title>Historias Generales</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/texto.css">
+  <link rel="icon" type="image/png" href="imagenes/geovoxicon.png">
+  <style>
+    .geojson-item {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+</style>
+
 </head>
 <body>
-  <h1>Entradas</h1>
-  <div id="entries-container">
-    <!-- Nuevas entradas se agregarán aquí -->
-                             
+  <header>
+    <div class="logo">
+      <img src="imagenes/logoc.png" alt="GeoVox" id="logo">                        
 
-                            <div class="entry">
-                                <h2>Me enamore</h2>
-                                <p>Me enamore de Oscar XD jajaja Saludos </p>
-                        
+                      
+</div>
+    <h1>Historias Generales</h1>
+  </header>
+  <div class="container">
+    <div id="geojson-container"></div>
+</div>
+<script>
+  document.getElementById('logo').addEventListener('click', function () {
+    window.location.href = 'mapa'; // Cambia "pagina2.html" por la ruta deseada
+  });
+  // Cargar el GeoJSON desde el servidor
+function cargarGeoJSON() {
+    fetch('/geojson') // Solicita los datos al servidor
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('No se pudo cargar el GeoJSON.');
+            }
+            return response.json();
+        })
+        .then(data => {
+            renderizarGeoJSON(data);
+        })
+        .catch(error => console.error('Error:', error));
+}
 
-                            <div class="entry">
-                                <h2>PAZ</h2>
-                                <p>Aqui da clase paz :c</p>
-                            
-                            <div class="entry">
-                                <h2>Tacos</h2>
-                                <p>Aca un dia nos regalaron tacos</p>
+// Renderizar el GeoJSON en el HTML
+function renderizarGeoJSON(data) {
+    const container = document.getElementById('geojson-container');
+    container.innerHTML = ''; // Limpiar contenido previo
 
-                        
-</div>
-                        
-</div>
-                        
-</div>
+    data.features.forEach((feature, index) => {
+        const properties = feature.properties;
+
+        // Verificar que existan las propiedades 'title' y 'description'
+        const title = properties.title || `Feature ${index + 1}`;
+        const description = properties.description || 'Sin descripción disponible';
+
+        // Crear elemento HTML
+        const item = document.createElement('div');
+        item.classList.add('geojson-item');
+
+        item.innerHTML = `
+            <h3>${title}</h3>
+            <p>${description}</p>
+        `;
+
+        container.appendChild(item);
+    });
+}
+
+// Ejecutar la función al cargar la página
+cargarGeoJSON();
+
+</script>
 </body>
 </html>

@@ -125,7 +125,7 @@ textarea {
 }
 
 .marker-options label img {
-  width: 90px;
+  width: 85px;
   height: auto;
 }
 
@@ -140,6 +140,9 @@ textarea {
   margin: 20px 0;
   border: 1px solid #ccc;
   border-radius: 4px;
+}
+.leaflet-control-attribution {
+  display: none;
 }
 
 .form-buttons {
@@ -180,19 +183,19 @@ input[type="text"], input[type="file"] {
   font-size: 14px; /* Tamaño de texto */
   width: 100%; /* Ocupa todo el ancho disponible */
   box-sizing: border-box; /* Incluye bordes en el ancho total */
+  height: 50px;
 }
 
 textarea {
-  background-color: #BCC2D0;
-  border: 2px solid #BCC2D0;
-  border-radius: 8px;
-  padding: 10px;
-  font-size: 14px;
-  width: 100%;
+  background-color: #BCC2D0; /* Fondo claro */
+  border: 2px solid #BCC2D0; /* Borde igual al de input[type="text"] */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 10px; /* Espaciado interno */
+  font-size: 14px; /* Tamaño del texto */
+  width: 100%; /* Ancho completo */
   height: 150px; /* Altura personalizada */
-  box-sizing: border-box;
+  box-sizing: border-box; /* Incluye bordes y padding en el ancho */
 }
-
 
 .grax{
   font-family: "Playfair Display", serif;
@@ -206,72 +209,62 @@ textarea {
   text-align: justify;
 }
 
-#logob{
-  max-height: 100px;
+#logob {
+  max-height: 100px; /* Controla el tamaño */
+  margin: 0; /* Elimina márgenes externos */
+}
+
+footer {
+  display: flex; /* Usar flexbox para alinear elementos */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  padding: 20px; /* Espaciado interno */
 }
 
 
-/* Media Queries for responsiveness */
-@media (min-width: 320px) {
-  body {
-    font-size: 14px;
-  }
-
-  header .logo img {
-    max-height: 80px;
-  }
-
-  #map {
-    height: 200px;
-  }
-
-  button {
-    font-size: 0.9rem;
-    padding: 8px 16px;
-  }
-}
-
-@media (min-width: 768px) {
-  .form-row {
-    flex-wrap: nowrap;
-  }
-
-  .form-group {
-    flex: 1;
-  }
-
-  header .logo img {
-    max-height: 150px;
-  }
-
+/* Media Queries */
+@media (max-width: 768px) {
   header h1 {
-    font-size: 3rem;
+    font-size: 6vw;
   }
 
-  #map {
-    height: 400px;
+  .instructions h2 {
+    font-size: 5vw;
   }
 
-  button {
-    font-size: 1rem;
-    padding: 10px 20px;
+  .instructions p {
+    font-size: 4vw;
   }
-}
 
-@media (min-width: 1024px) {
   form {
-    max-width: 800px;
+    padding: 15px;
   }
 
-  .instructions {
-    max-width: 800px;
+  .marker-options label img {
+    width: 30vw; /* Más grande en pantallas pequeñas */
   }
+}
 
+@media (max-width: 480px) {
   header h1 {
-    font-size: 3.5rem;
+    font-size: 7vw;
   }
 
-  header .logo img {
-    max-height: 200px;
+  .instructions h2 {
+    font-size: 6vw;
+  }
+
+  .instructions p {
+    font-size: 4.5vw;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  button {
+    width: 100%;
+    margin-bottom: 10px;
   }
 }

@@ -5,9 +5,7 @@ document.getElementById('subir').addEventListener('click', function () {
 document.getElementById('texto').addEventListener('click', function () {
   window.location.href = 'texto'; // Cambia "pagina2.html" por la ruta deseada
 });
-document.getElementById('audios').addEventListener('click', function () {
-  window.location.href = 'audios'; // Cambia "pagina2.html" por la ruta deseada
-});
+
 document.getElementById('fotos').addEventListener('click', function () {
   window.location.href = 'imagenes'; // Cambia "pagina2.html" por la ruta deseada
 });

@@ -78,6 +78,12 @@
             <img src="imagenes/tres.jpg" alt="Grid Image Placeholder">
             <img src="imagenes/cuatro.jpg" alt="Grid Image Placeholder">
         </div>
+        <div id="image-modal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modal-image">
+            <div id="caption"></div>
+        </div>
+        
     </section>
 
     <section>
@@ -91,6 +97,34 @@
         document.getElementById('mapa').addEventListener('click', function () {
             window.location.href = 'mapa'; // Cambia "mapa.html" 
         });
+
+        // Obtener el modal y sus elementos
+    const modal = document.getElementById("image-modal");
+    const modalImg = document.getElementById("modal-image");
+    const captionText = document.getElementById("caption");
+    const closeBtn = document.querySelector(".close");
+
+    // Seleccionar todas las imágenes de la clase grid
+    const gridImages = document.querySelectorAll(".grid img");
+
+    gridImages.forEach((img) => {
+        img.addEventListener("click", () => {
+            modal.style.display = "block";
+            modalImg.src = img.src; // Asigna la fuente de la imagen al modal
+        });
+    });
+
+    // Cerrar el modal al hacer clic en el botón de cierre
+    closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+
+    // Cerrar el modal al hacer clic fuera de la imagen
+    window.addEventListener("click", (event) => {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
       </script>
 </body>
 </html>
