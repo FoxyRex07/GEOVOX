@@ -10,7 +10,7 @@
             text-align: center;
             padding: 40px 0;
             height: 635px;
-            background-image: url('encabezado.jpg');
+            background-image: url('encabezado.png');
         }
         header img {
             margin-top: 10%;
@@ -111,6 +111,9 @@
             background-image: url('map.png');
             background-size: cover;
             filter:brightness(90%);/* Otro filtro en el fondo */
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
         }
         footer img {
             position: absolute;
@@ -122,11 +125,37 @@
             cursor: pointer; /* Cambia el cursor al ícono de mano */
             transition: transform 0.3s; /* Agrega un efecto suave */
             transform-origin: center;
+            display: block;
+            margin: 0 auto;
         }
         footer img:hover{
             transform: translate(-50%, -50%) scale(1.1);
         }
 
+        
+        .cc {
+            font-size: 14px;
+            color: #333;
+        }
+        
+        .cc p {
+            text-align: center;
+        }
+        
+        .cc a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        
+        .cc a:hover {
+            text-decoration: underline;
+        }
+        
+        .cc img {
+            height: 22px;
+            margin-left: 3px;
+            vertical-align: middle;
+        }
         .divider {
             border-top: 2px solid black;
             margin: 20px 0;

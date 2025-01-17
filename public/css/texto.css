@@ -61,3 +61,27 @@ p {
     margin-left: 2%;
     line-height: 1cm;
 }
+
+.cc {
+    font-size: 14px;
+    color: #333;
+}
+
+.cc p {
+    text-align: center;
+}
+
+.cc a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.cc a:hover {
+    text-decoration: underline;
+}
+
+.cc img {
+    height: 22px;
+    margin-left: 3px;
+    vertical-align: middle;
+}

@@ -57,7 +57,7 @@ document.getElementById('download-pdf-btn').addEventListener('click', function (
 let geojsonFeature;
 
 // Crear el mapa centrado en unas coordenadas específicas
-var map = L.map('mapa').setView([19.291261, -99.505652], 16);
+var map = L.map('mapa').setView([19.28844, -99.50903], 16);
 
 // Diseño de mapa
 L.tileLayer('https://tile.openstreetmap.de/{z}/{x}/{y}.png', {
@@ -161,6 +161,48 @@ fetch('/geojson')
     console.error('There was a problem with the fetch operation:', error);
   });
 
+
+  // Variable para almacenar la capa de marcadores y facilitar la actualización
+let markerLayer;
+
+// Función para cargar y filtrar marcadores
+function loadMarkers(filterCategory = '') {
+    if (markerLayer) {
+        map.removeLayer(markerLayer); // Eliminar marcadores anteriores
+    }
+
+    fetch('/geojson')
+    .then(response => response.json())
+    .then(data => {
+        markerLayer = L.geoJSON(data, {
+            filter: function (feature) {
+                if (!filterCategory) return true; // Si no hay filtro, muestra todo
+                return feature.properties.markerType.toLowerCase().includes(filterCategory.toLowerCase());
+            },
+            pointToLayer: function (feature, latlng) {
+                let iconUrl = markerImages[feature.properties.markerType] || "imagenes/default.png";
+                let normalIcon = L.icon({
+                    iconUrl: iconUrl,
+                    iconSize: [30, 41],
+                    iconAnchor: [15, 41]
+                });
+
+                return L.marker(latlng, { icon: normalIcon });
+            },
+            onEachFeature: onEachFeature
+        }).addTo(map);
+    })
+    .catch(error => console.error('Error al cargar GeoJSON:', error));
+}
+
+// Evento para aplicar el filtro
+document.getElementById('filterCategory').addEventListener('input', function() {
+    const category = document.getElementById('filterCategory').value.trim();
+    loadMarkers(category); // Recarga los marcadores con el filtro aplicado
+});
+
+// Cargar todos los marcadores al inicio
+loadMarkers();
 
 ///////////////////////////////// POPUPS utilizados///////////////////////////////////////////////////////////////////
 

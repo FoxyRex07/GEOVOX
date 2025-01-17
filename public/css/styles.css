@@ -4,6 +4,7 @@ body {
     padding: 0;
     display: flex;
     height: 100vh;
+    flex-direction: column;
 }
 
 .container {
@@ -264,6 +265,62 @@ h1 {
     border: none;
     background: none;
     cursor: pointer;
+}
+
+.footer-cc {
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 15px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+.footer-cc p {
+    margin: 0;
+    padding: 10px;
+}
+
+.footer-cc a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.footer-cc a:hover {
+    text-decoration: underline;
+}
+
+.footer-cc img {
+    height: 20px;
+    margin-left: 3px;
+    vertical-align: middle;
+}
+
+.cc {
+    font-size: 10px;
+    color: #333;
+}
+
+.cc p {
+    text-align: center;
+}
+
+.cc a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.cc a:hover {
+    text-decoration: underline;
+}
+
+.cc img {
+    height: 22px;
+    margin-left: 3px;
+    vertical-align: middle;
 }
 
 /* MAPA */

@@ -4,6 +4,501 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "¡Te acabo de bañar!",
+        "description": "En una ocasión bañe a mi perro por la tarde y olvide que no lo había sacado a pasear, entonces lo saque al quiosco de Lerma y tarde más en bañarlo que lo que tardó mi perro en revolcarse en popo de una paloma. ",
+        "markerType": "yellow"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.51154446598595,
+          19.286110690111904
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "La última vez",
+        "description": "Invité a mi amiga de Oaxaca aquí en Lerma y fuimos a comer wafles en el centro. Esa fue la última vez que la vi desde hace dos años.",
+        "markerType": "gray"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.51261198517388,
+          19.28528637101765
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Nos invitaron unas micheladas",
+        "description": "En una ocasión mis amigos y yo llegamos a un bar y como éramos los únicos que habían llegado ese día nos regalaron unas micheladas. ",
+        "markerType": "yellow"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.50318241106291,
+          19.292199029226055
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Me terminaron en un bar",
+        "description": "Una vez me puse tan borracho en un bar que mi novia termino conmigo porque hice cosas que no debí hacer. ",
+        "markerType": "purple"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.5034034251512,
+          19.292246749668326
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "La paca",
+        "description": "Me pongo a platicar con las señaras del tianguis mientras buscamos rompa en la paca.",
+        "markerType": "yellow"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.51140069948451,
+          19.2879296965772
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Señor lacra",
+        "description": "Una vez cuando fui a la iglesia vi como una señora se estaba robando el diezmo descaradamente, se llevó un billete de 50 pesos. Le dije al padre, pero me tacharon de chismoso.",
+        "markerType": "red"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.51129341112394,
+          19.286823864605857
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Me corrieron del gym",
+        "description": "Me corrieron del gimnasio porque no practicaba calistenia, y al parecer en ese GYM solo practicaban eso.",
+        "markerType": "red"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.51111745827804,
+          19.284956996670484
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "¡Que oso!",
+        "description": "Cuando fui por primera vez al GYM hice el oso por no saber utilizar las máquinas. Todo se pudo haber evitado si le hubiera preguntado al instructor como se usaban las maquinas. No volví a ese gimnasio.",
+        "markerType": "green"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.51121723648613,
+          19.284993706375616
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Me rechazaron en el Oxxo",
+        "description": "Ese día me arme de valor para decirle a mi amiga que me gustaba. Fuimos al Oxxo y en lo que esperábamos la combi le confesé mi amor y me rechazó, después de eso el camino a la universidad fue muy incómodo.",
+        "markerType": "purple"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.50643217560356,
+          19.285944927855432
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Seguí a un desconocido",
+        "description": "La primera vez que vine a Lerma no sabía como llegar a la universidad, entonces seguí a un chico que llevaba una mochila por todo el camino de los viveros con la esperanza que fuera estudiante y se dirigiera a la UAM (Si llegué). ",
+        "markerType": "yellow"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.50621438019881,
+          19.286018283537775
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Encuentro Universitario",
+        "description": "En una ocasión mis amigos de la UAEMEX vinieron a las letras de Soy UAM y nos tomamos una foto y al subirla en Instagram etiquetamos a las dos Universidades.",
+        "markerType": "yellow"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.49584388719816,
+          19.292251686147782
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "¡Hija impura!",
+        "description": "En una ocasión cuando me fui a confesar a la iglesia el padre me dio un manazo y me dijo “¡Hija impura!”",
+        "markerType": "yellow"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.51077735420769,
+          19.285953725489268
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Feliz Cumpleaños",
+        "description": "Cuando fue mi cumpleaños, mis amigos trajeron un pastel al comedor y me cantaron las mañanitas. Ahora mis amigas ya salieron de la universidad así que extraño esos momentos.",
+        "markerType": "gray"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.5001343488366,
+          19.29171574751935
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Cortesía de la UAM",
+        "description": "Una vez fuimos mis amigos y yo a la maquina de comida del comedor y la maquina nos dio unas galletas gratis. ",
+        "markerType": "yellow"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.49549412724083,
+          19.292315229169375
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Persecución en carretera",
+        "description": "En una ocasión iba el conductor del camión en donde iba acelero demasiado porque la carretera estaba libre. A la par de nosotros iba un tráiler de doble remolque que se le cerró al camión donde iba porque al parecer estaba escapando de la patrulla que venía detrás.",
+        "markerType": "orange"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.50695896135588,
+          19.285965118087923
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Perdí mi teléfono",
+        "description": "En el camión que tomo para ir a mi pueblito se me olvido mi teléfono en el asiento y no lo pude recuperar",
+        "markerType": "blue"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.51022911045585,
+          19.286158538998205
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "¿Dios Eres tu?",
+        "description": "Una vez iba en el camión de regreso a mi casa y estaba un poco preocupada porque no tenía mucho dinero y tenía que pagar el trimestre, en eso el señor que iba sentado a mi lado se le cayó su cartera, intenté alcanzarlo para devolvérsela, pero no lo logré. Con el dinero que tenía la cartera pude pagar mi trimestre y terminar bien la semana.",
+        "markerType": "yellow"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.50716924660811,
+          19.284594456290385
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Me intoxique x2",
+        "description": "Yo igual me intoxique en esta fondita",
+        "markerType": "blue"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.51489722725456,
+          19.28680335801984
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Me intoxique comiendo wafles ",
+        "description": "En una fondita de Lerma me intoxique porque los wafles tenían chocolate.",
+        "markerType": "blue"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.51467728611534,
+          19.286778041339748
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Hay una mosca en mi plato",
+        "description": "En un restaurante de las plazas outlet me sirvieron un plato de sopa y tenía una mosca",
+        "markerType": "green"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.50294637666957,
+          19.282408563337736
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "¿Es contra mi?",
+        "description": "Una vez mi equipo de eje y yo fuimos al centro de Lerma para grabar un performance y una señora nos vio con desagrado y alejó a su hijo para que no pasara cerca de nosotros.",
+        "markerType": "green"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.5109071730258,
+          19.285969168882186
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Muy enamorados",
+        "description": "En el centro de Lerma mi novio y yo nos dimos nuestro primer beso",
+        "markerType": "pink"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.51137924181239,
+          19.286187906524287
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Me equivoque de cine",
+        "description": "Compré las entradas por la aplicación del cine y cuando fui para ver mi película resulta que me había equivocado de cine y me perdí de la función.",
+        "markerType": "blue"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.50125122057216,
+          19.283275430151708
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Me abandono en el cine",
+        "description": "Fui a ver la película de la sustancia con mi novio, y a media película se fue con el pretexto de que la estaba aguantando, pero después me enteré de que se fue con su amigo.",
+        "markerType": "red"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.5017383098275,
+          19.283192452692656
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Me sacaron del museo",
+        "description": "Una vez fui al museo de Lerma y me sacaron por estar con mi teléfono y no prestar atención al expositor",
+        "markerType": "green"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.51007997986382,
+          19.286465125803087
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Propuesta de amor <3",
+        "description": "En el vivero mi pareja me propuso que fuera su novia con una cartita",
+        "markerType": "pink"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.50058603273646,
+          19.287297793513655
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "¿Dónde está mi mamá?",
+        "description": "En una ocasión mientras estábamos en el supermercado me separé por un momento de mi mamá, al darme vuelta para buscarla no la encontré y pasé una hora buscándola, pensando que me había abandonado.",
+        "markerType": "orange"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.51518690582817,
+          19.285279282252592
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "El tianguis",
+        "description": "Me encanta comer gorditas y tlacoyos en el tianguis porque están muy buenos.",
+        "markerType": "yellow"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.51135349267135,
+          19.287629061899178
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Mi ex en la UAM",
+        "description": "Una vez vi a un chico parecido a mi ex en la UAM.",
+        "markerType": "purple"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.50124692910323,
+          19.29161891380708
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "¿Clavos o Tortas?",
+        "description": "Una vez iba camino a la ferretería a comprar unos clavos, pero a medio camino se me olvidó a que había salido y terminé comprando tortas y saliendo del establecimiento choque. (Ya no compre los clavos)",
+        "markerType": "yellow"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.50766062733238,
+          19.291467650573257
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Recuerdos con mi ex </3",
+        "description": "En el quiosco del centro de Lerma iba a comer con mi ex",
+        "markerType": "gray"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.51172149178093,
+          19.28604486625623
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Me quemé la piel:(",
+        "description": "Un vez me quedé dormida en la terraza de la UAM y me queme la piel porque llevaba short",
+        "markerType": "blue"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.49591791626518,
+          19.292572438557247
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "De lo perdido lo encontrado",
+        "description": "En una ocasión me encontré dinero tirado debajo de los camastros de la terraza de la UAM",
+        "markerType": "yellow"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.49566578861779,
+          19.29256129959251
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "Mi cumpleaños 21",
         "description": "Un día en la noche antes de mi cumpleaños me caí en un charco y cuando llegue a mi casa mis roomies me hicieron una quesadilla con cerillos como pastel. Que se repita",
         "markerType": "yellow"
@@ -64,8 +559,8 @@
     {
       "type": "Feature",
       "properties": {
-        "title": "Tacos",
-        "description": "Aca un dia nos regalaron tacos",
+        "title": "Tacos gratis",
+        "description": "Aqui una noche muy tranquila donde no parecia haber novedad alguien mando que estaban regalando tacos en el centro, como buen foraneo me adentre en la travesia de ir por tacos gratis, excelente decision 10/10 y aun que llovio cene gratis",
         "markerType": "yellow"
       },
       "geometry": {
@@ -73,36 +568,6 @@
         "coordinates": [
           -99.51126015183037,
           19.286071259140204
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "title": "PAZ",
-        "description": "Aqui da clase paz :c",
-        "markerType": "orange"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -99.49605846391933,
-          19.29220738329434
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "title": "Me enamore",
-        "description": "Me enamore de Oscar XD jajaja Saludos ",
-        "markerType": "pink"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -99.50170183168666,
-          19.291701064426594
         ]
       }
     },
