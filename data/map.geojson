@@ -4,6 +4,21 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "Recuerdos con mi ex",
+        "description": "En el quiosco del centro de Lerma iba a comer con mi ex",
+        "markerType": "gray"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.5117161273629,
+          19.28603547237946
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "¡Te acabo de bañar!",
         "description": "En una ocasión bañe a mi perro por la tarde y olvide que no lo había sacado a pasear, entonces lo saque al quiosco de Lerma y tarde más en bañarlo que lo que tardó mi perro en revolcarse en popo de una paloma. ",
         "markerType": "yellow"
@@ -448,21 +463,6 @@
         "coordinates": [
           -99.50766062733238,
           19.291467650573257
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "title": "Recuerdos con mi ex </3",
-        "description": "En el quiosco del centro de Lerma iba a comer con mi ex",
-        "markerType": "gray"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -99.51172149178093,
-          19.28604486625623
         ]
       }
     },
