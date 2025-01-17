@@ -4,6 +4,66 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "Mi cumpleaños 21",
+        "description": "Un día en la noche antes de mi cumpleaños me caí en un charco y cuando llegue a mi casa mis roomies me hicieron una quesadilla con cerillos como pastel. Que se repita",
+        "markerType": "yellow"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.50277900692528,
+          19.291327906051777
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "EL PERRE VRGE",
+        "description": "Aquí conocí a mi perro de estabilidad emocional y que según le mío la mochila, siempre tan icónico ",
+        "markerType": "pink"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.5106003284127,
+          19.29161074937797
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Aquí me dieron en la madre",
+        "description": "Estuve llorando como 20 minutos pq me mandaron alv ",
+        "markerType": "orange"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.51237058636254,
+          19.28646715111679
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Te amo Dr. Simi",
+        "description": "Aquí me compré un pastillero chido del Dr. Simi, el mejor día de mi vida",
+        "markerType": "yellow"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.51241350170677,
+          19.286499556673373
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "Tacos",
         "description": "Aca un dia nos regalaron tacos",
         "markerType": "yellow"

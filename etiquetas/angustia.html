@@ -27,55 +27,7 @@
 
         <div class="separator"></div>
 
-        <div class="story">
-            <div class="story-content">
-                <h2 class="story-title">Título de la Historia</h2>
-                <div class="story-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-                </div>
-            </div>
-            <div class="icons">
-                <img src="imagenes/lu.jpg" alt="Imagen">
-            </div>
-        </div>
-
-        <div class="story">
-            <div class="story-content">
-                <h2 class="story-title">Título de la Historia</h2>
-                <div class="story-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-                </div>
-            </div>
-            <div class="icons">
-                <img src="imagenes/lui.jpg" alt="Imagen">
-            </div>
-        </div>
-
-        <div class="story">
-            <div class="story-content">
-                <h2 class="story-title">Título de la Historia</h2>
-                <div class="story-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-                </div>
-            </div>
-            <div class="icons">
-                <img src="imagenes/luis.jpg" alt="Imagen">
-            </div>
-        </div>
-
-        <div class="story">
-            <div class="story-content">
-                <h2 class="story-title">Título de la Historia</h2>
-                <div class="story-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-                </div>
-            </div>
-            <div class="icons">
-                <img src="imagenes/luism.jpg" alt="Imagen">
-            </div>
-        </div>
-
-
+        <div id="geojson-container"></div>
 
         <div class="separator1"></div>
 
@@ -87,6 +39,45 @@
  document.getElementById('logo').addEventListener('click', function () {
     window.location.href = 'mapa'; // Cambia "pagina2.html" por la ruta deseada
   });
+
+  function cargarGeoJSON() {
+            fetch('/geojson/orange') // Cargar solo los datos de la categoría "green"
+                .then(response => response.json())
+                .then(data => {
+                    renderizarGeoJSON(data);
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        function renderizarGeoJSON(data) {
+            const container = document.getElementById('geojson-container');
+            container.innerHTML = ''; // Limpiar contenido previo
+
+            if (!data.features || data.features.length === 0) {
+                container.innerHTML = '<p>No hay datos disponibles para esta categoría.</p>';
+                return;
+            }
+
+            data.features.forEach((feature, index) => {
+                const properties = feature.properties;
+
+                const title = properties.title || `Feature ${index + 1}`;
+                const description = properties.description || 'Sin descripción disponible';
+
+                const item = document.createElement('div');
+                item.classList.add('geojson-item');
+
+                item.innerHTML = `
+                    <h3>${title}</h3>
+                    <p>${description}</p>
+                `;
+
+                container.appendChild(item);
+            });
+        }
+
+        // Ejecutar la carga al abrir la página
+        cargarGeoJSON();
   </script>
 </body>
 </html>

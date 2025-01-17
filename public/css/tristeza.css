@@ -64,29 +64,34 @@ header .logo img {
     margin-left: 3%;
 }
 
-.story-title {
+h3 {
     font-family: "Bebas Neue", serif;
     font-style: normal;
     font-size: 300%;
     font-weight:400;
     color: #333;
-    margin-bottom: 4%; /* Espacio entre el título y el texto */
     margin-left: 5%;
 }
 
-.story-text {
+p{
     font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
-    font-size: 115%;
+    font-size: 130%;
     margin: 0; /* Sin margen alrededor del texto */
     padding: 0; /* Sin padding dentro del texto */
     flex: 1; /* Ocupa el espacio restante */
     margin-right: 5%;
     margin-left: 2%;
     line-height: 1cm;
+}
 
+.geojson-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
 }
 
 .icons img {

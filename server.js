@@ -121,6 +121,30 @@ app.post('/update-geojson', (req, res) => {
   });
 });
 
+app.get('/geojson/:markerType', (req, res) => {
+  const markerType = req.params.markerType; // Obtener el tipo desde la URL
+  const geojsonPath = path.join(__dirname, 'data', 'map.geojson');
+
+  fs.readFile(geojsonPath, 'utf8', (err, data) => {
+      if (err) {
+          return res.status(500).json({ message: 'Error al leer el archivo GeoJSON.' });
+      }
+
+      try {
+          const geojson = JSON.parse(data);
+
+          // Filtrar solo los elementos con el markerType especificado
+          const filteredFeatures = geojson.features.filter(feature => {
+              return feature.properties && feature.properties.markerType === markerType;
+          });
+
+          res.json({ type: "FeatureCollection", features: filteredFeatures });
+      } catch (error) {
+          res.status(500).json({ message: 'Error al procesar el archivo GeoJSON.' });
+      }
+  });
+});
+
 ////////////////////////Imagenes//////////////////////////////////////////
 
 // Configuración de almacenamiento para Multer
